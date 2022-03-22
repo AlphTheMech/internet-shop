@@ -16,6 +16,8 @@ return [
         'recommend' => 'Recommend',
         'new' => 'New',
     ],
+    'home'=>'Home',
+    'checkout'=>'Checkout',
     'contact'=>'Contact',
     'subscription'=>'Subscribe to our newsletter',
     'mailing_list'=>'Free worldwide shipping',

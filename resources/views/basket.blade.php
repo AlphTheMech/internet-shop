@@ -6,6 +6,7 @@
 <head>
     <link rel="stylesheet" href="/css/maincss/cart_responsive.css">
     <link rel="stylesheet" href="/css/maincss/cart.css">
+    {{-- <link rel="stylesheet" href="/css/maincss/main_styles.css"> --}}
 </head>
 <div class="super_container">
 <div class="home">
@@ -72,7 +73,7 @@
                                 <span>@lang('basket.countt')</span>
                                 <input  value="{{ $sku->countInOrder }}">
                                 <div class="quantity_buttons">
-                                    <form   action="{{ route('basket-add', $sku) }}" method="POST">
+                                    <form  action="{{ route('basket-add', $sku) }}" method="POST">
                                             <div id="quantity_inc_button" class="quantity_inc quantity_control">
                                                 <button style="background: none; border:none" type="submit" href="">
                                                     <i class="fa fa-chevron-up" aria-hidden="true"></i>
@@ -147,7 +148,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="button checkout_button">          <a type="button" 
+                    <div role="group" class="button checkout_button">          <a type="button" 
                         href="{{ route('basket-place') }}">@lang('basket.place_order')</a></div>
                 </div>
             </div>

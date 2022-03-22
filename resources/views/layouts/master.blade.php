@@ -12,19 +12,15 @@
     <link rel="stylesheet" type="text/css" href="js/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="js/plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" href="/css/maincss/bootstrap4/bootstrap.min.css">
-    {{-- 
-    <link rel="stylesheet" href="/css/maincss/categories_responsive.css">
-    <link rel="stylesheet" href="/css/maincss/categories.css">
-    <link rel="stylesheet" href="/css/maincss/checkout_responsive.css">
-    <link rel="stylesheet" href="/css/maincss/checkout.css">
-    <link rel="stylesheet" href="/css/maincss/contact_responsive.css">
-    <link rel="stylesheet" href="/css/maincss/contact.css"> --}}
     <link rel="stylesheet" href="/css/maincss/main_styles.css">
-    {{-- <link rel="stylesheet" href="/css/maincss/product_responsive.css">
-    <link rel="stylesheet" href="/css/maincss/product.css"> --}}
     <link rel="stylesheet" href="/css/maincss/responsive.css">
     <link href="/js/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    {{-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> --}}
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+        rel="stylesheet">
     {{-- Main Js --}}
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
@@ -35,7 +31,7 @@
     <script src="/js/custom.js"></script>
     <script src="/js/popper.js"></script>
     <script src="/js/product.js"></script>
-    {{-- Plagins --}}
+    {{-- Plugins --}}
     <script src="/js/plugins/greensock/TweenMax.min.js"></script>
     <script src="/js/plugins/greensock/TimelineMax.min.js"></script>
     <script src="/js/plugins/scrollmagic/ScrollMagic.min.js"></script>
@@ -48,18 +44,10 @@
     <script src="/js/plugins/bootstrap.min.js"></script>
     <script src="/js/plugins/popper.js"></script>
     <script src="/js/plugins/custom.js"></script>
-
-    {{-- <link rel="stylesheet" href="css/app.css"> --}}
-    {{-- <link href="/css/bootstrap.min.css" rel="stylesheet"> --}}
-    {{-- <link href="/css/starter-template.css" rel="stylesheet"> --}}
-   
 </head>
-
 <body>
     <div class="super_container">
-
         <!-- Header -->
-    
         <header class="header">
             <div class="header_container">
                 
@@ -124,13 +112,11 @@
                                                 </li>
                                             @endforeach
                                             </ul>
-                                        </li>
-                                        
+                                        </li>                               
                                         <li><a href="{{route('contact')}}">@lang('main.contact')</a></li>
                                             @guest
                                                 <li><a href="{{ route('login') }}">@lang('main.login')</a></li>
-                                            @endguest
-                        
+                                            @endguest                        
                                             @auth
                                                 @admin
                                                 <li><a href="{{ route('home') }}">@lang('main.admin_panel')</a></li>
@@ -151,8 +137,7 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                    </ul>
-                                    
+                                    </ul>                                    
                                 </nav>
                                 <div class="header_extra  ml-auto ">
                                     <div class="shopping_cart">
@@ -178,8 +163,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>           
         </header>
     
         <!-- Menu -->
@@ -202,17 +186,13 @@
                                 <li class="page_menu_item menu_mm"><a href="categories.html">Category</a></li>
                                 <li class="page_menu_item menu_mm"><a href="categories.html">Category</a></li>
                             </ul>
-                        </li>
-                        
-                        {{-- <li><a href="{{ route('reset') }}">@lang('main.reset_project')</a></li> --}}
-                        
-                        
+                        </li>                       
+                        {{-- <li><a href="{{ route('reset') }}">@lang('main.reset_project')</a></li> --}}                        
                         <li class="page_menu_item menu_mm" ><a href="contact.html">Contact</a></li>
                         {{-- <ul class="nav navbar-nav navbar-right"> --}}
                             @guest
                                 <li class="page_menu_item menu_mm"><a href="{{ route('login') }}">@lang('main.login')</a></li>
-                            @endguest
-        
+                            @endguest        
                             @auth
                                 @admin
                                 <li class="page_menu_item menu_mm"><a href="{{ route('home') }}">@lang('main.admin_panel')</a></li>
@@ -226,8 +206,7 @@
                         <li class="page_menu_item has-children menu_mm">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                 aria-expanded="false">{{ $currencySymbol }}<span class="caret"></span><i class="fa fa-angle-down"></i></a>
-                            <ul class="page_menu_selection menu_mm">
-                                
+                            <ul class="page_menu_selection menu_mm">                            
                                 @foreach ($currencies as $currency)
                                     <li><a href="{{ route('currency', $currency->code) }}">{{ $currency->symbol }}</a>
                                     </li>
@@ -237,9 +216,7 @@
                     </ul>
                 </div>
             </div>
-    
-            <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-    
+            <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>   
             <div class="menu_social">
                 <ul>
                     <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
@@ -261,8 +238,7 @@
             </div>
             @yield('content')
         {{-- </div> --}}
-        <!-- Ad -->
-    
+        <!-- Ad -->   
         <div class="avds_xl">
             <div class="container">
                 <div class="row">
@@ -279,13 +255,10 @@
                 </div>
             </div>
         </div>
-    
         <!-- Icon Boxes -->
-    
         <div class="icon_boxes">
             <div class="container">
-                <div class="row icon_box_row">
-                    
+                <div class="row icon_box_row">              
                     <!-- Icon Box -->
                     <div class="col-lg-4 icon_box_col">
                         <div class="icon_box">
@@ -296,7 +269,6 @@
                             </div>
                         </div>
                     </div>
-    
                     <!-- Icon Box -->
                     <div class="col-lg-4 icon_box_col">
                         <div class="icon_box">
@@ -307,7 +279,6 @@
                             </div>
                         </div>
                     </div>
-    
                     <!-- Icon Box -->
                     <div class="col-lg-4 icon_box_col">
                         <div class="icon_box">
@@ -318,13 +289,10 @@
                             </div>
                         </div>
                     </div>
-    
                 </div>
             </div>
-        </div>
-    
-        <!-- Newsletter -->
-    
+        </div> 
+        <!-- Newsletter --> 
         <div class="newsletter">
             <div class="container">
                 <div class="row">
@@ -354,11 +322,9 @@
         <div class="footer_overlay"></div>
         <footer class="footer">
             <div class="footer_background" style="background-image:url({{ Storage::url('image/footer.jpg') }}"></div>
-            
             <div class="container">
                 <div class="row">
-                    <div class="col">
-                        
+                    <div class="col">                 
                         <div class="footer_content d-flex flex-lg-row flex-column align-items-center justify-content-lg-start justify-content-center">
                             <div class="footer_logo"><a href="#">Pear.</a></div>
                             <div class="col ml-auto mr-auto">
@@ -379,8 +345,7 @@
                                             {{ $bestSku->product->__('name') }}</a></li>
                                 @endforeach
                                 </ul>
-                            </div>
-                            
+                            </div>        
                             {{-- <div class="copyright ml-auto mr-auto">
                                     Copyright | Все права защищены <i class="fa fa-heart-o" aria-hidden="true"></i> 
                                 </div> --}}
