@@ -124,7 +124,7 @@
     </div>
 
 <div style="position: relative; background:white; z-index:2">
-    <div class="container"> <h1>@lang('main.all_products')</h1>
+    <div class="container mt-4"> <h1>@lang('main.all_products')</h1>
         <form  method="GET" action="{{route("index")}}">
             <div class="filters row">
                 <div class="col-xl-12 col-sm-6 col-md-3 mt-2">
