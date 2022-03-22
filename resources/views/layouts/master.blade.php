@@ -145,7 +145,7 @@
                                         {{-- <li><a href="{{ route('reset') }}">@lang('main.reset_project')</a></li> --}}
                                         
                                         
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="{{route('contact')}}">@lang('main.contact')</a></li>
                                         {{-- <ul class="nav navbar-nav navbar-right"> --}}
                                             @guest
                                                 <li><a href="{{ route('login') }}">@lang('main.login')</a></li>
@@ -221,30 +221,6 @@
                 </div>
             </div>
             
-            <!-- Search Panel -->
-            {{-- <div class="search_panel trans_300">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="search_panel_content d-flex flex-row align-items-center justify-content-end">
-                                <form action="#">
-                                    <input type="text" class="search_input" placeholder="Search" required="required">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </div>--}}
-    
-            <!-- Social -->
-            {{-- <div class="header_social">
-                <ul>
-                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                </ul>
-            </div> --}}
         </header>
     
         <!-- Menu -->
@@ -300,30 +276,6 @@
                             </ul>
                         </li>
                     </ul>
-                    {{-- <ul class="page_menu_nav menu_mm">
-                        <li class="page_menu_item has-children menu_mm">
-                            <a href="index.html">Home<i class="fa fa-angle-down"></i></a>
-                            <ul class="page_menu_selection menu_mm">
-                                <li class="page_menu_item menu_mm"><a href="categories.html">Categories<i class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item menu_mm"><a href="cart.html">Cart<i class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item menu_mm"><a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li>
-                            </ul>
-                        </li>
-                        <li class="page_menu_item has-children menu_mm">
-                            <a href="categories.html">Categories<i class="fa fa-angle-down"></i></a>
-                            <ul class="page_menu_selection menu_mm">
-                                <li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
-                            </ul>
-                        </li>
-                        <li class="page_menu_item menu_mm"><a href="index.html">Accessories<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Offers<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li>
-                    </ul> --}}
                 </div>
             </div>
     
@@ -338,101 +290,6 @@
                 </ul>
             </div>
         </div>
-        
-        <!-- Home -->
-            {{-- @yield('mainpage') --}}
-    
-        <!-- Products -->
-    
-        {{-- <div class="products">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        
-                        <div class="product_grid">
-    
-                            <!-- Product -->
-                            <div class="product">
-                                <div class="product_image"><img src="storage/image/product_1.jpg" alt=""></div>
-                                <div class="product_extra product_new"><a href="categories.html">Новое</a></div>
-                                <div class="product_content">
-                                    <div class="product_title"><a href="product.html">Смартфон</a></div>
-                                    <div class="product_price">93 130 ₽</div>
-                                </div>
-                            </div>
-    
-                            <!-- Product -->
-                            <div class="product">
-                                <div class="product_image"><img src="storage/image/product_2.jpg" alt=""></div>
-                                <div class="product_extra product_sale"><a href="categories.html">Распродажа</a></div>
-                                <div class="product_content">
-                                    <div class="product_title"><a href="product.html">Смартфон</a></div>
-                                    <div class="product_price">93 130 ₽</div>
-                                </div>
-                            </div>
-    
-                            <!-- Product -->
-                            <div class="product">
-                                <div class="product_image"><img src="storage/image/product_3.jpg" alt=""></div>
-                                <div class="product_content">
-                                    <div class="product_title"><a href="product.html">Смартфон</a></div>
-                                    <div class="product_price">93 130 ₽</div>
-                                </div>
-                            </div>
-    
-                            <!-- Product -->
-                            <div class="product">
-                                <div class="product_image"><img src="storage/image/product_4.jpg" alt=""></div>
-                                <div class="product_content">
-                                    <div class="product_title"><a href="product.html">Смартфон</a></div>
-                                    <div class="product_price">93 130 ₽</div>
-                                </div>
-                            </div>
-    
-                            <!-- Product -->
-                            <div class="product">
-                                <div class="product_image"><img src="storage/image/product_5.jpg" alt=""></div>
-                                <div class="product_content">
-                                    <div class="product_title"><a href="product.html">Смартфон</a></div>
-                                    <div class="product_price">93 130 ₽</div>
-                                </div>
-                            </div>
-    
-                            <!-- Product -->
-                            <div class="product">
-                                <div class="product_image"><img src="storage/image/product_6.jpg" alt=""></div>
-                                <div class="product_extra product_hot"><a href="categories.html">Горячее</a></div>
-                                <div class="product_content">
-                                    <div class="product_title"><a href="product.html">Смартфон</a></div>
-                                    <div class="product_price">93 130 ₽</div>
-                                </div>
-                            </div>
-    
-                            <!-- Product -->
-                            <div class="product">
-                                <div class="product_image"><img src="storage/image/product_7.jpg" alt=""></div>
-                                <div class="product_content">
-                                    <div class="product_title"><a href="product.html">Смартфон</a></div>
-                                    <div class="product_price">93 130 ₽</div>
-                                </div>
-                            </div>
-    
-                            <!-- Product -->
-                            <div class="product">
-                                <div class="product_image"><img src="storage/image/product_8.jpg" alt=""></div>
-                                <div class="product_extra product_sale"><a href="categories.html">Горячее</a></div>
-                                <div class="product_content">
-                                    <div class="product_title"><a href="product.html">Смартфон</a></div>
-                                    <div class="product_price">93 130 ₽</div>
-                                </div>
-                            </div>
-    
-                        </div>
-                            
-                    </div>
-                </div>
-            </div>
-        </div> --}}
         {{-- <div class="container"> --}}
             <div class="starter-template">
                 @if (session()->has('success'))
@@ -454,9 +311,9 @@
                         <div class="avds_xl_container clearfix">
                             <div class="avds_xl_background" style="background-image:url({{Storage::url('/image/avds_xl.jpg')}})"></div>
                             <div class="avds_xl_content">
-                                <div class="avds_title">Удивительные устройства</div>
+                                <div class="avds_title">@lang('main.read_more')</div>
                                 <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus.</div>
-                                <div class="avds_link avds_xl_link"><a href="categories.html">Узнать больше</a></div>
+                                <div class="avds_link avds_xl_link"><a href="categories.html">@lang('main.learn_more')</a></div>
                             </div>
                         </div>
                     </div>
@@ -474,7 +331,7 @@
                     <div class="col-lg-4 icon_box_col">
                         <div class="icon_box">
                             <div class="icon_box_image"><img src="{{Storage::url('/image/icon_1.svg')}}" alt=""></div>
-                            <div class="icon_box_title">Бесплатная доставка по всему миру</div>
+                            <div class="icon_box_title">@lang('main.mailing_list')</div>
                             <div class="icon_box_text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
                             </div>
@@ -485,7 +342,7 @@
                     <div class="col-lg-4 icon_box_col">
                         <div class="icon_box">
                             <div class="icon_box_image"><img src="{{Storage::url('/image/icon_2.svg')}}" alt=""></div>
-                            <div class="icon_box_title"> Бесплатный возврат </div>
+                            <div class="icon_box_title"> @lang('main.mailing_list1') </div>
                             <div class="icon_box_text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
                             </div>
@@ -496,7 +353,7 @@
                     <div class="col-lg-4 icon_box_col">
                         <div class="icon_box">
                             <div class="icon_box_image"><img src="{{Storage::url('/image/icon_3.svg')}}" alt=""></div>
-                            <div class="icon_box_title">Круглосуточная быстрая поддержка</div>
+                            <div class="icon_box_title">@lang('main.mailing_list2')</div>
                             <div class="icon_box_text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
                             </div>
@@ -519,12 +376,12 @@
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <div class="newsletter_content text-center">
-                            <div class="newsletter_title">Подписывайтесь на нашу новостную рассылку</div>
+                            <div class="newsletter_title">@lang('main.subscription')</div>
                             <div class="newsletter_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros</p></div>
                             <div class="newsletter_form_container">
                                 <form action="#" id="newsletter_form" class="newsletter_form">
                                     <input type="email" class="newsletter_input" required="required">
-                                    <button class="newsletter_button trans_200"><span>Подписаться</span></button>
+                                    <button class="newsletter_button trans_200"><span>@lang('main.subscribe')</span></button>
                                 </form>
                             </div>
                         </div>

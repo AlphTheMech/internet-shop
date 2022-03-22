@@ -1,6 +1,11 @@
 <?php
 
 return [
+    'free'=>'Free',
+    'total_in_cart'=>'Total in cart',
+    'countt'=>'Qua',
+    'delivery'=>'Delivery',
+    'subtotal'=>'Subtotal',
     'cart' => 'Your Cart',
     'added' => 'Added to cart ',
     'removed' => 'Removed ',

@@ -33,9 +33,9 @@ class MainController extends Controller
             }
         }
 
-        $skus = $skusQuery->paginate(6)->withPath("?".$request->getQueryString());
+        $skus = $skusQuery->paginate(6)->withPath("?" . $request->getQueryString());
 
-        return view('index' , compact('skus'));
+        return view('index', compact('skus'));
     }
 
     public function categories()
@@ -88,5 +88,9 @@ class MainController extends Controller
         $currency = Currency::byCode($currencyCode)->firstOrFail();
         session(['currency' => $currency->code]);
         return redirect()->back();
+    }
+    public function contact()
+    {
+        return view('contact');
     }
 }

@@ -67,6 +67,7 @@ Route::middleware(['set_locale'])->group(function () {
 
     Route::controller(MainController::class)->group(function (){
         Route::get('/', 'index')->name('index');
+        Route::get('/contact', 'contact')->name('contact');
         Route::get('/categories', 'categories')->name('categories');
         Route::post('subscription/{skus}', 'subscribe')->name('subscription');
     });

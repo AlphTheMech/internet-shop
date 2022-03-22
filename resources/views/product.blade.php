@@ -57,11 +57,11 @@
                     <div class="details_name">{{ $skus->product->__('name') }}</div>
                     <div class="details_price">@lang('product.price'): <b>{{ $skus->price }} {{ $currencySymbol }}</div>
                     <div class="in_stock_container">
-                        <div class="availability">Наличие:</div>
+                        <div class="availability">@lang('product.availability')</div>
                         @if($skus->count > 0)
-                        <span>Есть в наличии</span>
+                        <span>@lang('product.is_availability')</span>
                         @else
-                        <span style="color: red">Нет в наличии</span>
+                        <span style="color: red">@lang('product.no_availability')</span>
                         @endif
                     </div>
                     <div class="details_text">
@@ -97,7 +97,7 @@
                         {{-- <div class="button cart_button"><a href="#">Добавить в корзину</a></div> --}}
                     </div>
                     <div class="details_share">
-                        <span>Поделиться:</span>
+                        <span>@lang('product.share')</span>
                         <ul>
                             <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -113,7 +113,7 @@
         <div class="row description_row">
             <div class="col">
                 <div class="description_title_container">
-                    <div class="description_title">Описание</div>
+                    <div class="description_title">@lang('product.description')</div>
                 </div>
                 <div class="description_text">
                     <p>{{ $skus->product->__('description') }}</p>

@@ -18,9 +18,9 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-                                        <div class="home_slider_title">Новый опыт интернет-магазина.</div>
+                                        <div class="home_slider_title">@lang('main.new_experience')</div>
                                         <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-                                        <div class="button button_light home_button"><a href="#">Купить сейчас</a></div>
+                                        <div class="button button_light home_button"><a href="#">@lang('main.buy_now')</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -36,9 +36,9 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-                                        <div class="home_slider_title">Новый опыт интернет-магазина.</div>
+                                        <div class="home_slider_title">@lang('main.new_experience')</div>
                                         <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-                                        <div class="button button_light home_button"><a href="#">Купить сейчас</a></div>
+                                        <div class="button button_light home_button"><a href="#">@lang('main.buy_now')</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -54,9 +54,9 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-                                        <div class="home_slider_title">Новый опыт интернет-магазина.</div>
+                                        <div class="home_slider_title">@lang('main.new_experience')</div>
                                         <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-                                        <div class="button button_light home_button"><a href="#">Купить сейчас</a></div>
+                                        <div class="button button_light home_button"><a href="#">@lang('main.buy_now')</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -99,13 +99,13 @@
                         <div>
                             <div class="avds_discount">
                                 <div>20<span>%</span></div>
-                                <div>Распродажа</div>
+                                <div>@lang('main.sale')</div>
                             </div>
                         </div>
                     </div>
                     <div class="avds_small_content">
-                        <div class="avds_title">Смартфон</div>
-                        <div class="avds_link"><a href="categories.html">Смотреть больше</a></div>
+                        <div class="avds_title">@lang('main.smartphone')</div>
+                        <div class="avds_link"><a href="categories.html">@lang('main.read')</a></div>
                     </div>
                 </div>
             </div>
@@ -114,9 +114,9 @@
                 <div class="avds_background" style="background-image:url({{Storage::url('image/avds_large.jpg')}})"></div>
                 <div class="avds_large_container">
                     <div class="avds_large_content">
-                        <div class="avds_title">Профессиональные камеры</div>
+                        <div class="avds_title">@lang('main.professional_camera')</div>
                         <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viver ra velit venenatis fermentum luctus.</div>
-                        <div class="avds_link avds_link_large"><a href="categories.html">Узнать больше</a></div>
+                        <div class="avds_link avds_link_large"><a href="categories.html">@lang('main.learn_more')</a></div>
                     </div>
                 </div>
             </div>
