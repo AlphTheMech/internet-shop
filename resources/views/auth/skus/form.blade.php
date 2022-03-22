@@ -29,7 +29,7 @@
 
                     <div class="input-group row">
                         <label for="price" class="col-sm-2 col-form-label">Цена: </label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 input-group-prepend">
                             @include('auth.layouts.error', ['fieldName' => 'price'])
                             <input type="text" class="form-control" name="price"
                                    value="@isset($skus){{ $skus->price }}@endisset">
@@ -37,7 +37,7 @@
                     </div>
                     <div class="input-group row">
                         <label for="count" class="col-sm-2 col-form-label">Кол-во: </label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 input-group-prepend">
                             @include('auth.layouts.error', ['fieldName' => 'count'])
                             <input type="text" class="form-control" name="count"
                                    value="@isset($skus){{ $skus->count }}@endisset">
