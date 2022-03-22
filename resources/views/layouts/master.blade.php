@@ -51,7 +51,7 @@
         <header class="header">
             <div class="header_container">
                 
-                <div class= "container-fluid" >
+                <div class= "container-fluid pl-3 pr-3  " >
                     <div class="row">
                         <div class="col">
                             <div class="header_content d-flex flex-row align-items-center justify-content-start">
