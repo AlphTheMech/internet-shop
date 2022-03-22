@@ -34,7 +34,6 @@ class BasketController extends Controller
 
         return redirect()->route('index');
     }
-
     public function basketPlace()
     {
         $basket = new Basket();
