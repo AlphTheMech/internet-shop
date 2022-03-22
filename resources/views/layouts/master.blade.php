@@ -188,7 +188,7 @@
                             </ul>
                         </li>                       
                         {{-- <li><a href="{{ route('reset') }}">@lang('main.reset_project')</a></li> --}}                        
-                        <li class="page_menu_item menu_mm" ><a href="contact.html">Contact</a></li>
+                        <li class="page_menu_item menu_mm" ><a href="{{route('contact')}}">@lang('main.contact')</a></li>
                         {{-- <ul class="nav navbar-nav navbar-right"> --}}
                             @guest
                                 <li class="page_menu_item menu_mm"><a href="{{ route('login') }}">@lang('main.login')</a></li>
@@ -248,7 +248,7 @@
                             <div class="avds_xl_content">
                                 <div class="avds_title">@lang('main.read_more')</div>
                                 <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus.</div>
-                                <div class="avds_link avds_xl_link"><a href="categories.html">@lang('main.learn_more')</a></div>
+                                <div class="avds_link avds_xl_link"><a href="{{route('categories')}}">@lang('main.learn_more')</a></div>
                             </div>
                         </div>
                     </div>
