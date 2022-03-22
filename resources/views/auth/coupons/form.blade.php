@@ -27,7 +27,7 @@
                 @csrf
                 <div class="input-group row">
                     <label for="code" class="col-sm-2 col-form-label">Код: </label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 input-group-prepend">
                         @include('auth.layouts.error', ['fieldName' => 'code'])
                         <input type="text" class="form-control" name="code" id="code"
                                value="@isset($coupon){{ $coupon->code }}@endisset">
@@ -36,7 +36,7 @@
                 <br>
                 <div class="input-group row">
                     <label for="value" class="col-sm-2 col-form-label">Номинал: </label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 input-group-prepend">
                         @include('auth.layouts.error', ['fieldName' => 'value'])
                         <input type="text" class="form-control" name="value" id="value"
                                value="@isset($coupon){{ $coupon->value }}@endisset">
@@ -45,7 +45,7 @@
                 <br>
                 <div class="input-group row">
                     <label for="currency_id" class="col-sm-2 col-form-label">Валюта: </label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 input-group-prepend">
                         @include('auth.layouts.error', ['fieldName' => 'currency_id'])
                         <select name="currency_id" id="currency_id" class="form-control">
                             <option value="">Без валюты</option>
@@ -81,7 +81,7 @@
                 <br>
                 <div class="input-group row">
                     <label for="expired_at" class="col-sm-2 col-form-label">Использовать до: </label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 input-group-prepend">
                         @include('auth.layouts.error', ['fieldName' => 'expired_at'])
                         <input type="date" class="form-control" name="expired_at" id="expired_at"
                                value="@if(isset($coupon) && !is_null($coupon->expired_at))
@@ -91,7 +91,7 @@
                 <br>
                 <div class="input-group row">
                     <label for="description" class="col-sm-2 col-form-label">Описание: </label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 input-group-prepend">
                         @include('auth.layouts.error', ['fieldName' => 'description'])
                         <textarea name="description" id="description" cols="72"
                                   rows="7">@isset($coupon){{ $coupon->description }}@endisset</textarea>

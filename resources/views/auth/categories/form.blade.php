@@ -28,7 +28,7 @@
                         @csrf
                         <div class="input-group row">
                             <label for="code" class="col-sm-2 col-form-label">Код: </label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 input-group-prepend">
                                 @error('code')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -39,7 +39,7 @@
                         <br>
                         <div class="input-group row">
                             <label for="name" class="col-sm-2 col-form-label">Название: </label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 input-group-prepend">
                                 @error('name')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -51,7 +51,7 @@
                             <br>
                             <div class="input-group row">
                                 <label for="name" class="col-sm-2 col-form-label">Название en: </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 input-group-prepend">
                                     @error('name_en')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -63,7 +63,7 @@
                             <br>
                         <div class="input-group row">
                             <label for="description" class="col-sm-2 col-form-label">Описание: </label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 input-group-prepend">
                                 @error('description')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -75,7 +75,7 @@
 
                             <div class="input-group row">
                                 <label for="description" class="col-sm-2 col-form-label">Описание en: </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 input-group-prepend">
                                     @error('description_en')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
