@@ -168,7 +168,7 @@
             @endforeach
         </div>
     </div>
-    <div class="pagination_main" style="justify-content: center; margin-bottom: 35px">
+    <div  style="justify-content: center; padding-bottom: 35px">
         {{ $skus->links() }}
     </div>
     
