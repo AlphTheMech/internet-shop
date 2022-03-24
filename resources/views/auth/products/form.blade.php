@@ -100,9 +100,9 @@
 
                 <div class="input-group row">
                     <label for="category_id" class="col-sm-2 col-form-label">Свойства товара: </label>
-                    <div class="col-sm-6 input-group-prepend">
+                    <div class="col-sm-6 ">
                         @include('auth.layouts.error', ['fieldName' => 'property_id[]'])
-                        <select name="property_id[]" multiple>
+                        <select name="property_id[]" multiple="multiple">
                             @foreach($properties as $property)
                                 <option value="{{ $property->id }}"
                                     @isset($product)
