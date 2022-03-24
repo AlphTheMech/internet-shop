@@ -41,9 +41,9 @@
     <script src="/js/plugins/Isotope/isotope.pkgd.min.js"></script>
     <script src="/js/plugins/easing/easing.js"></script>
     <script src="/js/plugins/parallax-js-master/parallax.min.js"></script>
-    <script src="/js/plugins/bootstrap.min.js"></script>
-    <script src="/js/plugins/popper.js"></script>
-    <script src="/js/plugins/custom.js"></script>
+    {{-- <script src="/js/plugins/bootstrap.min.js"></script> --}}
+    {{-- <script src="/js/plugins/popper.js"></script> --}}
+    {{-- <script src="/js/plugins/custom.js"></script> --}}
 </head>
 <body>
     <div class="super_container">

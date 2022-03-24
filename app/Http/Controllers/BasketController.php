@@ -25,15 +25,16 @@ class BasketController extends Controller
             session()->flash('warning', __('basket.coupon.not_available'));
             return redirect()->route('basket');
         }
-        // $email = Auth::check() ? Auth::user()->email : $request->email;
-        // if ($basket->saveOrder($request->name, $request->phone, $email)) {
-        //     session()->flash('success', __('basket.you_order_confirmed'));
-        // } else {
-        //     session()->flash('warning', __('basket.you_cant_order_more'));
-        // }
+        $email = Auth::check() ? Auth::user()->email : $request->email;
+        if ($basket->saveOrder($request->name, $request->phone, $email)) {
+            session()->flash('success', __('basket.you_order_confirmed'));
+        } else {
+            session()->flash('warning', __('basket.you_cant_order_more'));
+        }
 
         return redirect()->route('index');
     }
+
     public function basketPlace()
     {
         $basket = new Basket();
@@ -60,7 +61,6 @@ class BasketController extends Controller
 
     public function basketRemove(Sku $skus)
     {
-        //  intval($skus);
         (new Basket())->removeSku($skus);
 
         session()->flash('warning', __('basket.removed').$skus->product->__('name'));

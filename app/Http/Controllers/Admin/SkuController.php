@@ -72,9 +72,9 @@ class SkuController extends Controller
      * @param  Sku  $skus
      * @return void
      */
-    public function edit(Product $product, Sku $skus)
+    public function edit(Product $product, Sku $sku)
     {
-        return view('auth.skus.form', compact('product', 'skus'));
+        return view('auth.skus.form', compact('product', 'sku'));
     }
 
     /**
@@ -91,7 +91,7 @@ class SkuController extends Controller
         $params['product_id'] = $request->product->id;
         $skus->update($params);
         $skus->propertyOptions()->sync($request->property_id);
-        return redirect()->route('skus.index', $product);
+        return redirect()->route('skus.index', compact('product, skus'));
     }
 
     /**
