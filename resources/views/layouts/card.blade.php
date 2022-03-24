@@ -24,7 +24,10 @@
                         <div class="product_extra product_hit"><a href="categories.html">@lang('main.properties.hit')</a></div>
                         {{-- <span class="badge badge-danger"></span> --}}
                          @endif
-                        
+                        {{-- @if(($sku->product->isHit() && $sku->product->isRecommend()) || ( $sku->product->isNew() && $sku->product->isRecommend()) || ( $sku->product->isNew() && $sku->product->isHit()) )
+                        <div class="product_extra product_hit"><a href="categories.html">@lang('main.properties.hit')</a></div>
+                        <div class="product_extra product_sale"><a href="categories.html">@lang('main.properties.recommend')</a></div>
+                        @endif --}}
                         <div class="product_content">
                             <div class="product_title">{{ $sku->product->__('name') }}</div>
                             @isset($sku->product->properties)
@@ -36,16 +39,17 @@
                             {{-- <div class="product_title"><a href="product.html">Смартфон</a></div> --}}
                             <div class="product_price">{{ $sku->price }} {{ $currencySymbol }}</div>
                         </div>
-                        <form action="{{ route('basket-add', $sku) }}" method="POST">
+                        <form action="{{ route('basket-add', $sku) }}"  method="POST">
                             @if($sku->isAvailable())
-                                <button type="submit" class="btn btn-primary" role="button">@lang('main.add_to_basket')</button>
+                                <button type="submit" style="width:112px; height:52px"  class="newsletter_button trans_200" role="button"><span>@lang('main.add_to_basket')</span></button>
                             @else
                                 @lang('main.not_available')
                             @endif
                             <a href="{{ route('sku',
                                 [isset($category) ? $category->code :
                                 $sku->product->category->code, $sku->product->code, $sku->id]) }}"
-                               class="btn btn-default"
+                               {{-- class="icon_box_title" --}}
+                               style="padding-left:25px;color: black"
                                role="button">@lang('main.more')</a>
                             @csrf
                         </form>

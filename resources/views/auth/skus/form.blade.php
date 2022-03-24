@@ -26,7 +26,6 @@
                     @method('PUT')
                 @endisset
                 @csrf
-
                     <div class="input-group row">
                         <label for="price" class="col-sm-2 col-form-label">Цена: </label>
                         <div class="col-sm-2 input-group-prepend">
