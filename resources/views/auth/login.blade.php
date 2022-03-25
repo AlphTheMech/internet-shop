@@ -3,12 +3,7 @@
 @section('title', 'Авторизация')
 
 @section('content')
-<head> 
-    <link rel="stylesheet" href="css/testcss/bootstrap1.min.css">
-   
-    <script src="/js/bootstrap.min.js"></script>
-</head>
-    <div class="col-md-8">
+    <div class="col">
         <div class="card">
             <div class="card-header">Авторизация</div>
 
