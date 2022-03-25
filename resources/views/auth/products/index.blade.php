@@ -35,7 +35,7 @@
                         <td>{{ $product->category->name }}</td>
                         <td>
                             @foreach ($product->skus as $sku)
-                                <p>{{ $sku->propertyOptions->map->name->implode(', ') }}: {{ $sku->count }}</p>
+                                <p>{{ $sku->propertyOptions->map->name->implode(', ') }}: {{ $sku->count }} шт.</p>
                             @endforeach
                         </td>
                         <td>

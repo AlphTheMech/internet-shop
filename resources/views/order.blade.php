@@ -87,7 +87,7 @@
 							<form action="{{ route('basket-confirm') }}" method="POST" id="checkout_form" class="checkout_form">
 								<div>
 									<label for="checkout_company">@lang('basket.data.name')</label>
-									<input type="text" name="email" id="email"  id="checkout_company" class="checkout_input">
+									<input type="text" name="name" id="name"  id="checkout_company" class="checkout_input">
 								</div>
                                 <div>
 									<label for="checkout_company">@lang('basket.data.phone')</label>

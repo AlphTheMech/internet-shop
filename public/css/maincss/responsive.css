@@ -69,7 +69,9 @@
         max-width: 100%;
     }
     .main_nav {
-        margin-left: 50px;
+        /* margin-left: 50px; */
+        flex-grow: 0;
+        text-align: none;
     }
     .search {
         margin-left: 25px;

@@ -373,9 +373,10 @@ section {
 }
 
 .main_nav {
-    margin-left: 156px;
+    /* margin-left: 156px; */
+    flex-grow: 1;
+    text-align: center;
 }
-
 .main_nav>ul>li {
     display: inline-block;
     position: relative;
