@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Person;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\Sku;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,7 +21,7 @@ class OrderController extends Controller
         if (!Auth::user()->orders->contains($order)) {
             return back();
         }
-
-        return view('auth.orders.show', compact('order'));
+        $skus = $order->skus()->withTrashed()->get();
+        return view('auth.orders.show', compact('order', 'skus'));
     }
 }
