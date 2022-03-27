@@ -1129,8 +1129,8 @@ section {
 
 .product_content {
     width: 100%;
-    padding-top: 36px;
-    padding-bottom: 38px;
+  //  padding-top: 36px;
+   // padding-bottom: 38px;
 }
 
 .product_title a {
