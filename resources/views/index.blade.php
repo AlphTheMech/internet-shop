@@ -168,7 +168,7 @@
             @endforeach
         </div>
     </div>
-    <div  style="justify-content: center; padding-bottom: 35px">
+        <div  style="justify-content: center; padding-bottom: 35px ; display:flex">
         {{ $skus->links() }}
     </div>
     
