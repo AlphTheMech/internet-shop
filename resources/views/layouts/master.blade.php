@@ -328,13 +328,13 @@
                         <div class="footer_content d-flex flex-lg-row flex-column align-items-center justify-content-lg-start justify-content-center">
                             <div class="footer_logo"><a href="#">Pear.</a></div>
                             <div class="col ml-auto mr-auto">
-                                <p class="footer_category_title">Категории товаров</p>
-                              //  <ul>
-                                  //  @foreach ($categories as $category)
-                                  //      <li class="product_title"><a href="{{ route('category', $category->code) }}">{{ $category->__('name') }}</a>
-                                  //      </li>
-                                //    @endforeach
-                             //   </ul>
+                         {{-- <p class="footer_category_title">Категории товаров</p>
+                                <ul>
+                                    @foreach ($categories as $category)
+                                        <li class="product_title"><a href="{{ route('category', $category->code) }}">{{ $category->__('name') }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul> --}}
                             </div>
                             <div class="col ml-auto mr-auto ">
                                 <p class="footer_category_title">Популярные товары</p>
