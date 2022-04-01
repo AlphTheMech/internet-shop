@@ -23,7 +23,7 @@ class BasketController extends Controller
         if ($basket->getOrder()->hasCoupon() && !$basket->getOrder()->coupon->availableForUse()) {
             $basket->clearCoupon();
             session()->flash('warning', __('basket.coupon.not_available'));
-            return redirect()->route('basket');
+            return to_route('basket');
         }
         $email = Auth::check() ? Auth::user()->email : $request->email;
         if ($basket->saveOrder($request->name, $request->phone, $email)) {
@@ -32,7 +32,7 @@ class BasketController extends Controller
             session()->flash('warning', __('basket.you_cant_order_more'));
         }
 
-        return redirect()->route('index');
+        return to_route('index');
     }
 
     public function basketPlace()
@@ -41,7 +41,7 @@ class BasketController extends Controller
         $order = $basket->getOrder();
         if (!$basket->countAvailable()) {
             session()->flash('warning', __('basket.you_cant_order_more'));
-            return redirect()->route('basket');
+            return to_route('basket');
         }
         return view('order', compact('order'));
     }
@@ -56,7 +56,7 @@ class BasketController extends Controller
             session()->flash('warning', $skus->product->__('name').__('basket.not_available_more'));
         }
 
-        return redirect()->route('basket');
+        return to_route('basket');
     }
 
     public function basketRemove(Sku $skus)
@@ -65,7 +65,7 @@ class BasketController extends Controller
 
         session()->flash('warning', __('basket.removed').$skus->product->__('name'));
 
-        return redirect()->route('basket');
+        return to_route('basket');
     }
 
     public function setCoupon(AddCouponRequest $request)
@@ -79,6 +79,6 @@ class BasketController extends Controller
             session()->flash('warning', __('basket.coupon.not_available'));
         }
 
-        return redirect()->route('basket');
+        return to_route('basket');
     }
 }

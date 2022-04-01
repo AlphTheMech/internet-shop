@@ -49,7 +49,7 @@ class CouponController extends Controller
         }
 
         Coupon::create($params);
-        return redirect()->route('coupons.index');
+        return to_route('coupons.index');
     }
 
     /**
@@ -97,7 +97,7 @@ class CouponController extends Controller
         }
 
         $coupon->update($params);
-        return redirect()->route('coupons.index');
+        return to_route('coupons.index');
     }
 
     /**
@@ -109,6 +109,6 @@ class CouponController extends Controller
     public function destroy(Coupon $coupon)
     {
         $coupon->delete();
-        return redirect()->route('coupons.index');
+        return to_route('coupons.index');
     }
 }

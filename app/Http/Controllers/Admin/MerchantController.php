@@ -38,7 +38,7 @@ class MerchantController extends Controller
     public function store(Request $request)
     {
         Merchant::create($request->all());
-        return redirect()->route('merchants.index');
+        return to_route('merchants.index');
     }
 
     /**
@@ -73,7 +73,7 @@ class MerchantController extends Controller
     public function update(Request $request, Merchant $merchant)
     {
         $merchant->update($request->all());
-        return redirect()->route('merchants.index');
+        return to_route('merchants.index');
     }
 
     /**
@@ -85,12 +85,12 @@ class MerchantController extends Controller
     public function destroy(Merchant $merchant)
     {
         $merchant->delete();
-        return redirect()->route('merchants.index');
+        return to_route('merchants.index');
     }
 
     public function updateToken(Merchant $merchant)
     {
         session()->flash('success', $merchant->createToken());
-        return redirect()->route('merchants.index');
+        return to_route('merchants.index');
     }
 }

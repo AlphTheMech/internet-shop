@@ -24,6 +24,6 @@ class BasketIsNotEmpty
 
         session()->forget('order');
         session()->flash('warning', __('basket.cart_is_empty'));
-        return redirect()->route('index');
+        return to_route('index');
     }
 }

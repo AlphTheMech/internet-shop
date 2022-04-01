@@ -47,7 +47,7 @@ class SkuController extends Controller
         $params['product_id'] = $request->product->id;
         $skus = Sku::create($params);
         $skus->propertyOptions()->sync($request->property_id);
-        return redirect()->route('skus.index', $product);
+        return to_route('skus.index', $product);
     }
 
     /**
@@ -91,7 +91,7 @@ class SkuController extends Controller
         $params['product_id'] = $request->product->id;
         $skus->update($params);
         $skus->propertyOptions()->sync($request->property_id);
-        return redirect()->route('skus.index', compact('product, skus'));
+        return to_route('skus.index', compact('product, skus'));
     }
 
     /**
@@ -105,6 +105,6 @@ class SkuController extends Controller
     public function destroy(Product $product, Sku $skus)
     {
         $skus->delete();
-        return redirect()->route('skus.index', $product);
+        return to_route('skus.index', $product);
     }
 }
